@@ -1,0 +1,515 @@
+<html>
+	
+
+
+	
+	
+	
+
+	
+<style>
+	
+@font-face {
+	font-family: myVF;
+	src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf');
+	src: url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('https://marcodagolini.github.io/vfalbania/Fonts/VFreg.svg#svgFontName') format('svg'); /* Legacy iOS */
+	
+	} 
+
+	
+
+.little_disclaimer_lp{
+   float: left;
+   margin-top: 5px;
+   margin-left: 60px;
+   font-size: 12.5;
+   color: #4a4d4e;
+   font-family: myVF;
+}
+.header_text_lp{
+   float: left;
+   margin: 10px;
+   color: white;
+}
+
+.startChat_lp {
+    background-color: #e60000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute;
+    bottom:5px;
+    left: 10px;
+    margin: 20px 20px;
+    font-family: myVF;
+    width: 289px;
+
+}
+.startChat_lp:hover {
+    background-color: #cf0000;
+    color: white;	
+}
+
+.startChat_lp:disabled,
+.startChat_lp[disabled]{
+  background-color: #ff8a8a;
+  opacity: 0.5;
+}
+	
+.showContainer_lp {
+  background:url(https://www.vodafone.al/ext_files/TOBi/icon_shadow.png) no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.engagement_lp{
+  right:0px;
+  bottom: 0px;
+  width: 370px;
+  height: 220px;
+  position:absolute;
+
+}
+
+.disclaimer_lp{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.container_disclaimer_lp{
+  visibility:hidden;
+  background-color: #ebebeb;
+  position: absolute;
+  top: 0px;
+  width: 350px;
+  height: 214px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px transparent;
+  border-radius: 10px;
+  font-family: myVF;
+}
+
+.header_disclaimer_lp{
+  background-color: #e60000;
+  background-size: cover;
+  position: relative;
+  width:350px;
+  height: 40px;
+  border-radius: 10px 10px 0px 0px;
+}
+	
+
+</style>
+	
+	
+ <head>
+
+ 
+	 
+	 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
+	
+
+
+	 
+<!-- BEGIN LivePerson Monitor. -->
+<script type="text/javascript">window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window.lpTag={wl:lpTag.wl||null,scp:lpTag.scp||null,site:'21382912'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:'1.10.0',_tagCount:1,protocol:'https:',events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){t._domReady('domReady')}):(window.addEventListener('DOMContentLoaded',function(){t._domReady('contReady')},!1),window.addEventListener('load',function(){t._domReady('domReady')},!1)),'undefined'===typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;</script>
+<!-- END LivePerson Monitor. -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	 
+	 <script>
+		 
+	function sendLocation(){
+		 setTimeout(function(){
+			 var CurrentLocation = window.location.href;
+			 lpTag.newPage(CurrentLocation, {section: "mytestpage"});
+			 lpTag.sdes.push({
+				 "type": "ctmrinfo",
+				 "info": {
+					 customerId: '1'
+				 }
+			 });
+		 }, 1000);
+	 }
+		 
+	 sendLocation();
+		 
+	 </script>
+
+ 
+ 
+ 
+ <title>VFTest</title>
+ 
+ <style>
+ 
+
+
+
+	 
+.myLivePersonEngagement {
+
+    height: 150px !important;
+    width: 250px !important;
+    position:absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}
+ 
+ </style>
+ </head>
+ <body>
+	 
+ <script>
+	 
+	 
+
+	
+ 
+	 function newMessage(data, eventInfo){
+		 
+		 console.log("data --> " + JSON.stringify(data));
+		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		 console.log("**********");
+		 console.log("**********");
+		 console.log("**********");
+		 
+	 }
+	 
+	 
+	 
+	 function translate(data, eventInfo){
+		 
+		 if(data.state === "init"){
+
+			 var refreshIntervalId3;
+			 refreshIntervalId3 = setInterval(function(){
+				 if(jQuery('#lp_date_line_Today').length > 0){
+					 document.getElementById('lp_date_line_Today').textContent = 'Sot';
+					 clearInterval(refreshIntervalId3);
+				 }
+			 }, 10);
+
+			 
+		 }
+
+		 
+	 }
+
+	
+	 
+
+	 
+	 function adjust(data, eventInfo){
+		 
+		 $('.lp_floating').css('opacity', 1)
+		 
+
+		 if(data.state === "waiting"){
+			 setTimeout(function(){
+				 var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
+
+				 if (isMacLike || isIOS) {
+					 jQuery(".lpview_form_textarea").blur();
+					 var $htmlOrBody = jQuery('html, body'); // scrollTop works on <body> for some browsers, <html> for others
+					 jQuery('.lpview_form_textarea').focus(function() {
+						 setTimeout(function(){
+							 $htmlOrBody.scrollTop(jQuery('.lp_bottom_area').height());
+						 }, 400);
+					 });
+				 }
+				 
+			 }, 1000);
+		 }
+	}
+	 
+	 function offeredOrNot(){
+		 
+		 
+		 jQuery("#showContainer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","hidden");
+			  jQuery(".container_disclaimer_lp").css("visibility","visible");
+		  });
+		  
+		  jQuery("#accept_lp").mouseup(function() {
+			  if (!jQuery(this).is(':checked')) {
+				  jQuery("#startChat_lp").prop( "disabled", false );
+				  
+			  } else{
+				  jQuery("#startChat_lp").prop( "disabled", true );
+			  }
+		  });
+		  
+		  jQuery("#closeDisclaimer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","visible");
+			  jQuery(".container_disclaimer_lp").css("visibility","hidden");
+		  });
+		 
+
+		 
+		 
+		 
+	 }
+	 
+
+	 
+	 
+	 
+	 
+	 
+	 window.onload = function() {
+		 
+		 var observer = new window.MutationObserver(function (mutations) {
+			 
+			 mutations.forEach(function(mutation) {
+
+				 
+				 if(mutation.target.className.indexOf("lp-window-root") > -1){
+
+					 var myLoader = document.getElementsByClassName("lp_top-text");
+					 var myLoaderLength = myLoader.length;
+					 for (var a = 0; a < myLoaderLength; a++){
+						 myLoader[a].textContent = "Ne ngarkim";
+					 }
+					 
+					 // document.getElementsByClassName('lp_rotator')[0].innerHTML = "<img src='https://res.cloudinary.com/djtjkiytu/image/upload/v1585247439/Screenshot_2020-03-26_at_19.25.34.png'>"
+					 document.getElementsByClassName('lp_rotator')[0].innerHTML = ""
+
+				 }
+				 
+				 
+				 if(mutation.target.className.indexOf("lp_top-text") > -1){
+					 
+					 var myLoader = document.getElementsByClassName("lp_top-text");
+					 var myLoaderLength = myLoader.length;
+					 for (var a = 0; a < myLoaderLength; a++){
+						 if(myLoader[a].textContent === "Message us"){
+							 myLoader[a].textContent = "Na shkruaj";
+						 }
+						 
+					 }
+					
+				 }
+				 
+				 if(mutation.target.className.indexOf("lp_top_menu") > -1){
+					 
+					 var mySmallIcon = document.getElementsByClassName("lp_chatting-with-icon");
+					 var mySmallIconLength = mySmallIcon.length;
+					 for (var a = 0; a < mySmallIconLength; a++){
+						var myNode =  mySmallIcon[0];
+						 myNode.parentNode.removeChild(myNode);
+					 }
+					 
+					 var myClosure = document.getElementsByClassName("lp_close");
+					 var myClosureLength = myClosure.length;
+					 for (var a = 0; a < myClosureLength; a++){
+						myClosure[a].title = "Përfundo bisedën";
+					 }
+					 
+					 var myMinimize = document.getElementsByClassName("lp_minimize");
+					 var myMinimizeLength = myMinimize.length;
+					 for (var a = 0; a < myMinimizeLength; a++){
+						myMinimize[a].title = "Zvogëlo";
+					 }
+
+				 }
+				 
+
+				 if(mutation.target.className.indexOf("lpc_message-area") > -1){
+					 
+					 var refreshIntervalTextBox;
+					 refreshIntervalTextBox = setInterval(function(){
+						 if(jQuery('.lpview_form_textarea').attr('placeholder') === "Enter text here"){
+							 jQuery('.lpview_form_textarea').attr('placeholder','Shkruaj këtu...');
+							 jQuery('.lpview_form_textarea').attr('title','Shkruaj këtu');
+							 jQuery(".lpview_form_textarea").css("width","250px");
+							 clearInterval(refreshIntervalTextBox);
+						 }
+					 }, 100);
+					 
+					 var refreshIntervalEmoji;
+					 refreshIntervalEmoji = setInterval(function(){
+						 var myEmoji = document.getElementsByClassName("lp_emoji_button");
+						 var myEmojiLength = myEmoji.length;
+						 if(myEmojiLength > 0){
+							 clearInterval(refreshIntervalEmoji);
+							 for (var a = 0; a < myEmojiLength; a++){
+								 myEmoji[a].title = "Zgjidh Emoji";
+							 }
+						 }
+						 
+					 }, 100);
+					 
+					 
+					 setTimeout(function(){
+						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
+						 var mySendLength = mySend.length;
+						 if(mySendLength > 0){
+							 for (var a = 0; a < mySendLength; a++){
+								 mySend[a].title = "Dërgo";
+							 } 
+						 }
+						 
+					 }, 1000); 
+				 
+					 
+					 
+					 if(document.getElementsByClassName("lp_actions_button").length > 0){
+						 var node = document.getElementsByClassName("lp_actions_button")[0];
+						 node.parentNode.removeChild(node);
+						 jQuery(".lp_input_area").css("position","absolute");
+						 jQuery(".lp_input_area").css("left","10px");
+					 }
+					 
+
+				 }
+				 
+				 if(mutation.target.className.indexOf("lpc_transcript") > -1){
+					 
+					 var myClasses = document.getElementsByClassName("lp_sender");
+					 for(var i = 0; i < myClasses.length; i++) {
+						 if(myClasses[i].textContent === "Agent"){
+							 myClasses[i].textContent = "Agjent"; 
+						 }
+						 if(myClasses[i].textContent === "You"){
+							 myClasses[i].textContent = "Ti"; 
+						 }
+						 jQuery('.lp_time').contents().filter(function() {
+							 return this.nodeType == 3
+						 }).each(function(){
+							 this.textContent = this.textContent.replace('Now','Tani');
+						 });
+					 }
+					 
+					 setTimeout(function(){
+						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
+						 var mySendLength = mySend.length;
+						 if(mySendLength > 0){
+							 for (var a = 0; a < mySendLength; a++){
+								 mySend[a].title = "Dërgo";
+							 } 
+						 }
+						 
+					 }, 1000); 
+
+				 }
+				 
+				 if(mutation.target.className.indexOf("lp_lpview_mp") > -1){
+					 
+					 if(document.getElementsByClassName('lp_lpview_title').length > 0){
+						 document.getElementById('dialog_title').textContent = "Dëshiron të përfundosh bisedën?";
+						 document.getElementsByClassName('lp_cancel_button')[0].textContent = "Jo";
+						 document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
+					 }
+					 
+				 }
+				 
+				 if(mutation.target.className.indexOf("lp_survey_container") > -1){
+					 if(document.getElementsByClassName("lpc_survey-area__question-label").length > 0){
+						 document.getElementsByClassName("lpc_survey-area__question-label")[0].textContent = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
+						 var mySurveyLabelLength = jQuery(".lp_top-text").length;
+						 for(var q = 0; q < mySurveyLabelLength; q++){
+							 if(jQuery(".lp_top-text")[q].textContent === "Thank you"){
+								 jQuery(".lp_top-text")[q].textContent = "Faleminderit";
+							 }
+						 }
+						 jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
+						 jQuery(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
+						 jQuery(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
+						 
+						 jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
+						 jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
+						 jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
+						 jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
+						 jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
+					 }
+
+				 }
+				 
+				 if(mutation.target.className.indexOf("lp_csat_rater_current_rating") > -1){
+					 
+					 if(mutation.target.innerHTML === "Very dissatisfied"){
+						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e pakënaqur";
+					 }
+					 if(mutation.target.innerHTML === "Dissatisfied"){
+						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E pakënaqur";
+					 }
+					 if(mutation.target.innerHTML === "Neutral"){
+						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Neutral";
+					 }
+					 if(mutation.target.innerHTML === "Satisfied"){
+						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E kënaqur";
+					 }
+					 if(mutation.target.innerHTML === "Very Satisfied"){
+						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
+					 }
+
+					 
+				 }
+
+			 });
+		 });
+
+
+		 observer.observe(document, {
+			 childList: true,
+			 subtree:true
+		 });
+
+		 
+
+		 
+		 
+		 lpTag.events.bind({
+			 eventName : "state",
+			 appName : "lpUnifiedWindow",
+			 func: adjust,
+			 triggerOnce : false
+		 });
+		 
+		 
+		 lpTag.events.bind({
+			 eventName : "state",
+			 appName : "lpUnifiedWindow",
+			 func: translate,
+			 triggerOnce : false
+		 });
+		 
+		 lpTag.events.bind({
+			 eventName : "OFFER_IMPRESSION",
+			 appName : "LP_OFFERS",
+			 func: offeredOrNot,
+			 triggerOnce : false
+
+		 });
+		 
+
+
+		 
+}
+	 
+
+  
+
+ </script>
+ 
+ 
+</body>
+  
+
+  
+</html>
