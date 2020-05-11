@@ -277,6 +277,8 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 
 			 mutations.forEach(function(mutation) {
+				 
+				 console.log(mutation.target.className);
 
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
