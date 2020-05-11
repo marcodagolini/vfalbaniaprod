@@ -374,6 +374,21 @@
 							 } 
 						 }
 						 
+						 
+						 
+						 jQuery(".lpc_minimized-header__maximize-button-asset").click(function (e) {
+							 
+							 var mySend = document.getElementsByClassName("lpc_composer__send-button");
+							 var mySendLength = mySend.length;
+							 if(mySendLength > 0){
+								 for (var a = 0; a < mySendLength; a++){
+									 mySend[a].title = "Dërgo";
+								 } 
+							 }
+						 
+						 
+						 });
+						 
 					 }, 1000); 
 				 
 					 
