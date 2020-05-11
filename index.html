@@ -355,7 +355,13 @@
 						 if(jQuery('.lpview_form_textarea').attr('placeholder') === "Enter text here"){
 							 jQuery('.lpview_form_textarea').attr('placeholder','Shkruaj këtu...');
 							 jQuery('.lpview_form_textarea').attr('title','Shkruaj këtu');
-							 jQuery(".lpview_form_textarea").css("width","250px");
+							 
+							 if(jQuery(".lpview_form_textarea")[0].className.indexOf("lpc_mobile") > -1){
+								 jQuery(".lpview_form_textarea").css("width","320px");
+							 } else{
+								 jQuery(".lpview_form_textarea").css("width","250px");
+							 }
+
 							 clearInterval(refreshIntervalTextBox);
 						 }
 					 }, 100);
