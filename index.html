@@ -246,16 +246,18 @@
 		  });
 		  
 		  jQuery("#accept_lp").mouseup(function() {
-			  jQuery("#accept_lp").attr("disabled", true);
-			  setTimeout(function(){
-				  jQuery("#accept_lp").removeAttr("disabled");
-			  }, 1000);
+			  
 			  if (!jQuery(this).is(':checked')) {
 				  jQuery("#startChat_lp").prop( "disabled", false );
 				  
 			  } else{
 				  jQuery("#startChat_lp").prop( "disabled", true );
 			  }
+			  
+			  document.getElementById("accept_lp").disabled = true;
+			  setTimeout(function(){
+				  document.getElementById("accept_lp").disabled = false;
+			  }, 1000);
 		  });
 		  
 		  jQuery("#closeDisclaimer_lp").click(function(){
