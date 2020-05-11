@@ -369,13 +369,16 @@
 					 
 					 
 	
-					 
-					 if(document.getElementsByClassName("lp_actions_button").length > 0){
-						 var node = document.getElementsByClassName("lp_actions_button")[0];
-						 node.parentNode.removeChild(node);
-						 jQuery(".lp_input_area").css("position","absolute");
-						 jQuery(".lp_input_area").css("left","10px");
-					 }
+					 var refreshIntervalPlus;
+					 refreshIntervalPlus = setInterval(function(){
+						 if(document.getElementsByClassName("lp_actions_button").length > 0){
+							 clearInterval(refreshIntervalPlus);
+							 var node = document.getElementsByClassName("lp_actions_button")[0];
+							 node.parentNode.removeChild(node);
+							 jQuery(".lp_input_area").css("position","absolute");
+							 jQuery(".lp_input_area").css("left","10px");
+						 }
+					 }, 100); 
 					 
 
 				 }
