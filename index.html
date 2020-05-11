@@ -244,8 +244,15 @@
 			  jQuery(".showContainer_lp").css("visibility","hidden");
 			  jQuery(".container_disclaimer_lp").css("visibility","visible");
 		  });
+		 
+		 jQuery("#accept_lp").change(function() {
+			 jQuery('#accept_lp').prop('disabled', true);
+			 setTimeout(function(){
+				 jQuery('#accept_lp').prop('disabled', false);
+			 }, 200);
+		 });
 		  
-		  jQuery("#accept_lp").change(function() {
+		  jQuery("#accept_lp").mouseup(function() {
 			  
 			  if (!jQuery(this).is(':checked')) {
 				  jQuery("#startChat_lp").prop( "disabled", false );
@@ -254,10 +261,7 @@
 				  jQuery("#startChat_lp").prop( "disabled", true );
 			  }
 			  
-			  jQuery('#accept_lp').prop('disabled', true);
-			  setTimeout(function(){
-				  jQuery('#accept_lp').prop('disabled', false);
-			  }, 200);
+			  
 		  });
 		  
 		  jQuery("#closeDisclaimer_lp").click(function(){
