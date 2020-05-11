@@ -253,9 +253,9 @@
 				  jQuery("#startChat_lp").prop( "disabled", true );
 			  }
 			  
-			  document.getElementById("accept_lp").disabled = true;
+			  jQuery('#accept_lp').prop('disabled', true);
 			  setTimeout(function(){
-				  document.getElementById("accept_lp").disabled = false;
+				  jQuery('#accept_lp').prop('disabled', false);
 			  }, 1000);
 		  });
 		  
