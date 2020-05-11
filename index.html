@@ -246,7 +246,7 @@
 			  jQuery(".container_disclaimer_lp").css("visibility","visible");
 		  });
 		  
-		  jQuery("#accept_lp").mouseup(function() {
+		  jQuery("#accept_lp").change(function() {
 			  
 			  if (!jQuery(this).is(':checked')) {
 				  jQuery("#startChat_lp").prop( "disabled", false );
