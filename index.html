@@ -624,11 +624,6 @@
 					 for (var a = 0; a < myMaximizeLength; a++){
 						// myMaximize[a].title = "Hapur";
 					 }
-
-				 }
-				 
-
-				 if(mutation.target.className.indexOf("lp_location_bottom") > -1){
 					 
 					 var refreshIntervalTextBox;
 					 refreshIntervalTextBox = setInterval(function(){
@@ -645,6 +640,14 @@
 							 clearInterval(refreshIntervalTextBox);
 						 }
 					 }, 100);
+					 
+
+				 }
+				 
+
+				 if(mutation.target.className.indexOf("lp_location_bottom") > -1){
+					 
+					 
 					 
 					 var refreshIntervalEmoji;
 					 refreshIntervalEmoji = setInterval(function(){
