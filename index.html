@@ -361,15 +361,15 @@
     messagingState_image_ERROR: "This file failed to upload.<br>Please try another file.",
     messagingState_image_RETRY: "This file failed to upload.<br>Please try again.",
     csatLevel_0: "",
-    csatLevel_1: "Very dissatisfied",
-    csatLevel_2: "Dissatisfied",
+    csatLevel_1: "Shumë i/e pakënaqur",
+    csatLevel_2: "I/E pakënaqur",
     csatLevel_3: "Neutral",
-    csatLevel_4: "Satisfied",
-    csatLevel_5: "Very Satisfied",
+    csatLevel_4: "I/E kënaqur",
+    csatLevel_5: "Shumë i/e kënaqur",
     outOf: "out of",
     csatTheAgent: "the agent",
-    csatRatingQuestion: "How would you rate your conversation with {{agentName}}?",
-    csatDisclaimer: "Your feedback helps us serve you better. <br>It will not be shared with any customer service representative.",
+    csatRatingQuestion: "Si do e vlerësoje bisedën e zhvilluar me agjentin?",
+    csatDisclaimer: "Vlerësimi yt na ndihmon të përmirësohemi",
     cobrowseInvitation: "I have invited you to join a CoBrowse session, where I will be able to walk you through our website. To start, please click Accept.",
     cobrowseAcceptBtn: "Accept",
     cobrowseRejectBtn: "Reject",
@@ -745,15 +745,15 @@
 								 // jQuery(".lp_top-text")[q].textContent = "Faleminderit";
 							 }
 						 }
-						 jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
+						 // jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
 						 jQuery(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
 						 // jQuery(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
 						 
-						 jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
-						 jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
-						 jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
-						 jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
-						 jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
+						 // jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
+						 // jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
+						 // jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
+						 // jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
+						 // jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
 					 }
 
 				 }
@@ -761,19 +761,19 @@
 				 if(mutation.target.className.indexOf("lp_csat_rater_current_rating") > -1){
 					 
 					 if(mutation.target.innerHTML === "Very dissatisfied"){
-						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e pakënaqur";
+						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e pakënaqur";
 					 }
 					 if(mutation.target.innerHTML === "Dissatisfied"){
-						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E pakënaqur";
+						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E pakënaqur";
 					 }
 					 if(mutation.target.innerHTML === "Neutral"){
-						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Neutral";
+						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Neutral";
 					 }
 					 if(mutation.target.innerHTML === "Satisfied"){
-						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E kënaqur";
+						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E kënaqur";
 					 }
 					 if(mutation.target.innerHTML === "Very Satisfied"){
-						 document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
+						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
 					 }
 
 					 
