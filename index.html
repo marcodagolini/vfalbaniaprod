@@ -457,20 +457,6 @@
 	 
 	 
 
-	
- 
-	 function newMessage(data, eventInfo){
-		 
-		 console.log("data --> " + JSON.stringify(data));
-		 console.log("eventInfo --> " + JSON.stringify(eventInfo));
-		 console.log("**********");
-		 console.log("**********");
-		 console.log("**********");
-		 
-	 }
-	 
-	 
-	 
 	 function adjust(data, eventInfo){
 		 
 		 $('.lp_floating').css('opacity', 1)
@@ -575,33 +561,9 @@
 						 myNode.parentNode.removeChild(myNode);
 					 }
 					 
-					 /****
-					 
-					 var myClosure = document.getElementsByClassName("lp_close");
-					 var myClosureLength = myClosure.length;
-					 for (var a = 0; a < myClosureLength; a++){
-						// myClosure[a].title = "Përfundo bisedën";
-					 }
-					 
-					 var myMinimize = document.getElementsByClassName("lp_minimize");
-					 var myMinimizeLength = myMinimize.length;
-					 for (var a = 0; a < myMinimizeLength; a++){
-						// myMinimize[a].title = "Zvogëlo";
-					 }
-					 
-					 var myMaximize = document.getElementsByClassName("lp_maximize");
-					 var myMaximizeLength = myMaximize.length;
-					 for (var a = 0; a < myMaximizeLength; a++){
-						// myMaximize[a].title = "Hapur";
-					 }
-					 
-					 ****/
-					 
 					 var refreshIntervalTextBox;
 					 refreshIntervalTextBox = setInterval(function(){
 						 if(jQuery('.lpview_form_textarea').length > 0){
-							 // jQuery('.lpview_form_textarea').attr('placeholder','Shkruaj këtu...');
-							 // jQuery('.lpview_form_textarea').attr('title','Shkruaj këtu');
 							 
 							 if(jQuery(".lpview_form_textarea")[0].className.indexOf("lpc_mobile") > -1){
 								 jQuery(".lpview_form_textarea").css("width","320px");
@@ -618,52 +580,7 @@
 				 
 
 				 if(mutation.target.className.indexOf("lp_location_bottom") > -1){
-					 
-					 /******
-					 
-					 var refreshIntervalEmoji;
-					 refreshIntervalEmoji = setInterval(function(){
-						 var myEmoji = document.getElementsByClassName("lp_emoji_button");
-						 var myEmojiLength = myEmoji.length;
-						 if(myEmojiLength > 0){
-							 clearInterval(refreshIntervalEmoji);
-							 for (var a = 0; a < myEmojiLength; a++){
-								 // myEmoji[a].title = "Zgjidh Emoji";
-							 }
-						 }
-						 
-					 }, 100);
-					 
-					 
-					 setTimeout(function(){
-						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
-						 var mySendLength = mySend.length;
-						 if(mySendLength > 0){
-							 for (var a = 0; a < mySendLength; a++){
-								 // mySend[a].title = "Dërgo";
-							 } 
-						 }
-						 
-						 
-						 
-						 jQuery(".lpc_minimized-header__maximize-button-asset").click(function (e) {
-							 setTimeout(function(){
-								 var mySend = document.getElementsByClassName("lpc_composer__send-button");
-								 var mySendLength = mySend.length;
-								 if(mySendLength > 0){
-									 for (var a = 0; a < mySendLength; a++){
-										 // mySend[a].title = "Dërgo";
-									 } 
-								 }
-							 }, 1000); 
-						 
-						 });
-						 
-					 }, 1000); 
-					 
-					 ****/
-				 
-					 
+
 					 
 					 if(document.getElementsByClassName("lp_actions_button").length > 0){
 						 var node = document.getElementsByClassName("lp_actions_button")[0];
@@ -674,92 +591,7 @@
 					 
 
 				 }
-				 
-				 if(mutation.target.className.indexOf("lpc_transcript") > -1){
-					 
-					 /******
-					 var myClasses = document.getElementsByClassName("lp_sender");
-					 for(var i = 0; i < myClasses.length; i++) {
-						 if(myClasses[i].textContent === "Agent"){
-							 // myClasses[i].textContent = "Agjent"; 
-						 }
-						 if(myClasses[i].textContent === "You"){
-							 // myClasses[i].textContent = "Ti"; 
-						 }
-						 jQuery('.lp_time').contents().filter(function() {
-							 return this.nodeType == 3
-						 }).each(function(){
-							 // this.textContent = this.textContent.replace('Now','Tani');
-						 });
-					 }
-					 
-					 setTimeout(function(){
-						 var mySend = document.getElementsByClassName("lpc_composer__send-button");
-						 var mySendLength = mySend.length;
-						 if(mySendLength > 0){
-							 for (var a = 0; a < mySendLength; a++){
-								 // mySend[a].title = "Dërgo";
-							 } 
-						 }
-						 
-					 }, 1000); 
-					 
-					 ******/
 
-				 }
-				 
-				 /****
-				 
-				 if(mutation.target.className.indexOf("lp_lpview_mp") > -1){
-
-					 
-				 }
-				 
-				 if(mutation.target.className.indexOf("lp_survey_container") > -1){
-					 if(document.getElementsByClassName("lpc_survey-area__question-label").length > 0){
-						 document.getElementsByClassName("lpc_survey-area__question-label")[0].textContent = "Si do e vlerësoje bisedën e zhvilluar me agjentin?";
-						 var mySurveyLabelLength = jQuery(".lp_top-text").length;
-						 for(var q = 0; q < mySurveyLabelLength; q++){
-							 if(jQuery(".lp_top-text")[q].textContent === "Thank you"){
-								 // jQuery(".lp_top-text")[q].textContent = "Faleminderit";
-							 }
-						 }
-						 // jQuery(".lp_survey_disclaimer")[0].textContent = "Vlerësimi yt na ndihmon të përmirësohemi";
-						 // jQuery(".lpc_survey-area__cancel-button")[0].textContent = "Fshij"
-						 // jQuery(".lpc_survey-area__submit-button")[0].textContent = "Dërgo"
-						 
-						 // jQuery("a[data-lp-rating='1']")[0].title = "Shumë i/e pakënaqur"
-						 // jQuery("a[data-lp-rating='2']")[0].title = "I/E pakënaqur"
-						 // jQuery("a[data-lp-rating='3']")[0].title = "Neutral"
-						 // jQuery("a[data-lp-rating='4']")[0].title = "I/E kënaqur"
-						 // jQuery("a[data-lp-rating='5']")[0].title = "Shumë i/e kënaqur"
-					 }
-
-				 }
-				 
-				 if(mutation.target.className.indexOf("lp_csat_rater_current_rating") > -1){
-					 
-					 if(mutation.target.innerHTML === "Very dissatisfied"){
-						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e pakënaqur";
-					 }
-					 if(mutation.target.innerHTML === "Dissatisfied"){
-						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E pakënaqur";
-					 }
-					 if(mutation.target.innerHTML === "Neutral"){
-						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Neutral";
-					 }
-					 if(mutation.target.innerHTML === "Satisfied"){
-						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "I/E kënaqur";
-					 }
-					 if(mutation.target.innerHTML === "Very Satisfied"){
-						 // document.getElementsByClassName('lp_csat_rater_current_rating')[0].textContent = "Shumë i/e kënaqur";
-					 }
-
-					 
-				 }
-				 
-				 
-				 ****/
 
 			 });
 		 });
