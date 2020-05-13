@@ -471,28 +471,6 @@
 	 
 	 
 	 
-	 function translate(data, eventInfo){
-		 
-		 if(data.state === "init"){
-
-			 var refreshIntervalId3;
-			 refreshIntervalId3 = setInterval(function(){
-				 if(jQuery('#lp_date_line_Today').length > 0){
-					 // document.getElementById('lp_date_line_Today').textContent = 'Sot';
-					 clearInterval(refreshIntervalId3);
-				 }
-			 }, 10);
-
-			 
-		 }
-
-		 
-	 }
-
-	
-	 
-
-	 
 	 function adjust(data, eventInfo){
 		 
 		 $('.lp_floating').css('opacity', 1)
@@ -566,9 +544,7 @@
 		 var observer = new window.MutationObserver(function (mutations) {
 			 
 			 mutations.forEach(function(mutation) {
-				 
-				 console.log(mutation);
-				 
+
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
 
@@ -587,15 +563,6 @@
 				 if(mutation.target.className.indexOf("lp_top-text") > -1){
 					 
 					 addLanguage();
-					 
-					 var myLoader = document.getElementsByClassName("lp_top-text");
-					 var myLoaderLength = myLoader.length;
-					 for (var a = 0; a < myLoaderLength; a++){
-						 if(myLoader[a].textContent === "Message us"){
-							 // myLoader[a].textContent = "Na shkruaj";
-						 }
-						 
-					 }
 					
 				 }
 				 
@@ -607,6 +574,8 @@
 						var myNode =  mySmallIcon[0];
 						 myNode.parentNode.removeChild(myNode);
 					 }
+					 
+					 /****
 					 
 					 var myClosure = document.getElementsByClassName("lp_close");
 					 var myClosureLength = myClosure.length;
@@ -625,6 +594,8 @@
 					 for (var a = 0; a < myMaximizeLength; a++){
 						// myMaximize[a].title = "Hapur";
 					 }
+					 
+					 ****/
 					 
 					 var refreshIntervalTextBox;
 					 refreshIntervalTextBox = setInterval(function(){
@@ -648,7 +619,7 @@
 
 				 if(mutation.target.className.indexOf("lp_location_bottom") > -1){
 					 
-					 
+					 /******
 					 
 					 var refreshIntervalEmoji;
 					 refreshIntervalEmoji = setInterval(function(){
@@ -689,6 +660,8 @@
 						 });
 						 
 					 }, 1000); 
+					 
+					 ****/
 				 
 					 
 					 
@@ -704,6 +677,7 @@
 				 
 				 if(mutation.target.className.indexOf("lpc_transcript") > -1){
 					 
+					 /******
 					 var myClasses = document.getElementsByClassName("lp_sender");
 					 for(var i = 0; i < myClasses.length; i++) {
 						 if(myClasses[i].textContent === "Agent"){
@@ -729,16 +703,15 @@
 						 }
 						 
 					 }, 1000); 
+					 
+					 ******/
 
 				 }
 				 
+				 /****
+				 
 				 if(mutation.target.className.indexOf("lp_lpview_mp") > -1){
-					 
-					 if(document.getElementsByClassName('lp_lpview_title').length > 0){
-						 // document.getElementById('dialog_title').textContent = "Dëshiron të përfundosh bisedën?";
-						 // document.getElementsByClassName('lp_cancel_button')[0].textContent = "Jo";
-						 // document.getElementsByClassName('lp_confirm_button')[0].textContent = "Po";
-					 }
+
 					 
 				 }
 				 
@@ -784,6 +757,9 @@
 
 					 
 				 }
+				 
+				 
+				 ****/
 
 			 });
 		 });
@@ -795,8 +771,6 @@
 		 });
 
 		 
-
-		 
 		 
 		 lpTag.events.bind({
 			 eventName : "state",
@@ -805,13 +779,6 @@
 			 triggerOnce : false
 		 });
 		 
-		 
-		 lpTag.events.bind({
-			 eventName : "state",
-			 appName : "lpUnifiedWindow",
-			 func: translate,
-			 triggerOnce : false
-		 });
 		 
 		 lpTag.events.bind({
 			 eventName : "OFFER_IMPRESSION",
