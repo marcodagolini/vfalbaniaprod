@@ -568,7 +568,8 @@
 					 var mySmallIconLength = mySmallIcon.length;
 					 for (var a = 0; a < mySmallIconLength; a++){
 						var myNode =  mySmallIcon[0];
-						 myNode.parentNode.removeChild(myNode);
+						 // myNode.parentNode.removeChild(myNode);
+						 node.style.display = 'none';
 					 }
 					 
 					 var refreshIntervalTextBox;
@@ -594,7 +595,8 @@
 					 
 					 if(document.getElementsByClassName("lp_actions_button").length > 0){
 						 var node = document.getElementsByClassName("lp_actions_button")[0];
-						 node.parentNode.removeChild(node);
+						 node.style.display = 'none';
+						 // node.parentNode.removeChild(node);
 						 jQuery(".lp_input_area").css("position","absolute");
 						 jQuery(".lp_input_area").css("left","10px");
 					 }
