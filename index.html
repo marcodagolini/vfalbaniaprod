@@ -153,6 +153,70 @@
 			 triggerOnce : false
 
 		 });
+	
+	
+	
+	function adjust(data, eventInfo){
+		 
+		 $('.lp_floating').css('opacity', 1)
+		 
+
+		 if(data.state === "waiting"){
+			 setTimeout(function(){
+				 var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
+
+				 if (isMacLike || isIOS) {
+					 jQuery(".lpview_form_textarea").blur();
+					 var $htmlOrBody = jQuery('html, body'); // scrollTop works on <body> for some browsers, <html> for others
+					 jQuery('.lpview_form_textarea').focus(function() {
+						 setTimeout(function(){
+							 $htmlOrBody.scrollTop(jQuery('.lp_bottom_area').height());
+						 }, 400);
+					 });
+				 }
+				 
+			 }, 1000);
+		 }
+	}
+	 
+	 function offeredOrNot(){
+		 
+		 
+		 jQuery("#showContainer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","hidden");
+			  jQuery(".container_disclaimer_lp").css("visibility","visible");
+		  });
+		 
+		 jQuery("#accept_lp").change(function() {
+			 jQuery('#accept_lp').prop('disabled', true);
+			 setTimeout(function(){
+				 jQuery('#accept_lp').prop('disabled', false);
+			 }, 200);
+		 });
+		  
+		  jQuery("#accept_lp").mouseup(function() {
+			  
+			  if (!jQuery(this).is(':checked')) {
+				  jQuery("#startChat_lp").prop( "disabled", false );
+				  
+			  } else{
+				  jQuery("#startChat_lp").prop( "disabled", true );
+			  }
+			  
+			  
+		  });
+		  
+		  jQuery("#closeDisclaimer_lp").click(function(){
+			  jQuery(".showContainer_lp").css("visibility","visible");
+			  jQuery(".container_disclaimer_lp").css("visibility","hidden");
+		  });
+		 
+
+		 
+		 
+		 
+	 }
 	 
 	 </script>
 <!-- END LivePerson Monitor. -->
@@ -474,75 +538,7 @@
 	 
  <script>
 	 
-	 
 
-	 function adjust(data, eventInfo){
-		 
-		 $('.lp_floating').css('opacity', 1)
-		 
-
-		 if(data.state === "waiting"){
-			 setTimeout(function(){
-				 var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
-				 var isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
-
-				 if (isMacLike || isIOS) {
-					 jQuery(".lpview_form_textarea").blur();
-					 var $htmlOrBody = jQuery('html, body'); // scrollTop works on <body> for some browsers, <html> for others
-					 jQuery('.lpview_form_textarea').focus(function() {
-						 setTimeout(function(){
-							 $htmlOrBody.scrollTop(jQuery('.lp_bottom_area').height());
-						 }, 400);
-					 });
-				 }
-				 
-			 }, 1000);
-		 }
-	}
-	 
-	 function offeredOrNot(){
-		 
-		 
-		 jQuery("#showContainer_lp").click(function(){
-			  jQuery(".showContainer_lp").css("visibility","hidden");
-			  jQuery(".container_disclaimer_lp").css("visibility","visible");
-		  });
-		 
-		 jQuery("#accept_lp").change(function() {
-			 jQuery('#accept_lp').prop('disabled', true);
-			 setTimeout(function(){
-				 jQuery('#accept_lp').prop('disabled', false);
-			 }, 200);
-		 });
-		  
-		  jQuery("#accept_lp").mouseup(function() {
-			  
-			  if (!jQuery(this).is(':checked')) {
-				  jQuery("#startChat_lp").prop( "disabled", false );
-				  
-			  } else{
-				  jQuery("#startChat_lp").prop( "disabled", true );
-			  }
-			  
-			  
-		  });
-		  
-		  jQuery("#closeDisclaimer_lp").click(function(){
-			  jQuery(".showContainer_lp").css("visibility","visible");
-			  jQuery(".container_disclaimer_lp").css("visibility","hidden");
-		  });
-		 
-
-		 
-		 
-		 
-	 }
-	 
-
-	 
-	 
-	 
-	 
 	 
 	 window.onload = function() {
 		 
