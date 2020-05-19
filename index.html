@@ -540,7 +540,7 @@
 			 
 			 mutations.forEach(function(mutation) {
 				 
-				 console.log(mutation);
+				 // console.log(mutation);
 
 				 
 				 if(mutation.target.className.indexOf("lp-window-root") > -1){
@@ -612,9 +612,7 @@
 
 		 observer.observe(document, {
 			 childList: true,
-			 subtree:true,
-			 attributes:true,
-			 characterData:true
+			 subtree:true
 		 });
 
 
