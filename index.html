@@ -533,7 +533,7 @@
 				 // console.log(mutation);
 
 				 
-				 if(mutation.target.className.indexOf("lp-window-root") > -1){
+				 if(typeof mutation.target.className === "string" && mutation.target.className.indexOf("lp-window-root") > -1){
 
 					 var myLoader = document.getElementsByClassName("lp_top-text");
 					 var myLoaderLength = myLoader.length;
@@ -547,13 +547,13 @@
 				 }
 				 
 				 
-				 if(mutation.target.className.indexOf("lp_top-text") > -1){
+				 if(typeof mutation.target.className === "string" && mutation.target.className.indexOf("lp_top-text") > -1){
 					 
 					 addLanguage();
 					
 				 }
 				 
-				 if(mutation.target.className.indexOf("lp_top_menu") > -1){
+				 if(typeof mutation.target.className === "string" && mutation.target.className.indexOf("lp_top_menu") > -1){
 					 
 					 var mySmallIcon = document.getElementsByClassName("lp_chatting-with-icon");
 					 var mySmallIconLength = mySmallIcon.length;
@@ -581,7 +581,7 @@
 				 }
 				 
 
-				 if(mutation.target.className.indexOf("lp_location_bottom") > -1){
+				 if(typeof mutation.target.className === "string" && mutation.target.className.indexOf("lp_location_bottom") > -1){
 
 					 
 					 if(document.getElementsByClassName("lp_actions_button").length > 0){
